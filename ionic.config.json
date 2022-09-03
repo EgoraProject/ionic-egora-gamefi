@@ -1,0 +1,7 @@
+{
+  "name": "ionic-egora-gamefi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
