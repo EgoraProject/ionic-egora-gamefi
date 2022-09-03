@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import * as Sentry from '@sentry/capacitor'
+import * as SentryReact from '@sentry/react'
+import { BrowserTracing } from '@sentry/tracing'
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
@@ -11,6 +14,14 @@ root.render(
     <App />
   </React.StrictMode>
 );
+Sentry.init({
+  // what sentry project the data should be sent to
+  dsn: process.env.SENTRY_DSN, 
+  release: "sentry-demo@0.4.0",
+  dist: "1",
+  tracesSampleRate: 1,
+  integrations: [new BrowserTracing]
+}, SentryReact.init)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
