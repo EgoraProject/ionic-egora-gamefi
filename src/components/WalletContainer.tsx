@@ -46,6 +46,7 @@ const WalletContainer: React.FC<ContainerProps> = () => {
         }
         const web3authProvider = await web3auth.connect();
         setProvider(web3authProvider);
+        throw new Error("oh noooo")
     };
 
     const getUserInfo = async () => {
