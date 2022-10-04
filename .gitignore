@@ -1,10 +1,13 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules
 /.pnp
 .pnp.js
-
+.env
+coverage
+coverage.json
+typechain 
 # testing
 /coverage
 
@@ -25,4 +28,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Optional eslint cache
-.eslintcache
+.eslintcachei
+
+# Hardhat files
+cache
+artifacts 
