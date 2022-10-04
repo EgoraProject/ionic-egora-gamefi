@@ -7,8 +7,7 @@ node_modules
 .env
 coverage
 coverage.json
-typechain 
-typechain-types
+
 # testing
 /coverage
 
@@ -34,3 +33,4 @@ yarn-error.log*
 # Hardhat files
 cache
 artifacts 
+typechain-types
